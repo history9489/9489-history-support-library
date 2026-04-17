@@ -30,11 +30,17 @@ if 'search_results' not in st.session_state:
 
 # --- 2. CORE FUNCTIONS (Must be at the top) ---
 
-def get_gdrive_service():
-    creds = service_account.Credentials.from_service_account_file(
-        SERVICE_ACCOUNT_FILE, scopes=SCOPES)
-    return build('drive', 'v3', credentials=creds)
+#def get_gdrive_service():
+#    creds = service_account.Credentials.from_service_account_file(
+#        SERVICE_ACCOUNT_FILE, scopes=SCOPES)
+#    return build('drive', 'v3', credentials=creds)
 
+def get_gdrive_service():
+    # This line pulls the keys from the Streamlit "Secret Safe"
+    creds_info = st.secrets["google_creds"]
+    creds = service_account.Credentials.from_service_account_info(
+        creds_info, scopes=SCOPES)
+    return build('drive', 'v3', credentials=creds)
 
 def sync_from_drive():
     """Teleports files from Google Drive to local folders"""
