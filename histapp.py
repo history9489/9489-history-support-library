@@ -241,7 +241,7 @@ st.markdown(
     """
     <div style="text-align: center; width: 100%;">
         <p style="font-size: 20px; font-weight: bold; margin-bottom: 5px;">
-            ✨ PTES 9709 Mathematics Resource Portal ✨
+            ✨ PTES 9489 History PYP Resources Portal ✨
         </p>
         <p style="font-size: 16px; font-weight: bold; letter-spacing: 0.5px;">
             <span style="color: #FF0000;">🔴 Academically Excellence</span> | 
@@ -250,7 +250,7 @@ st.markdown(
             <span style="color: #28A745;">🟢 Holistic & Growth</span>
         </p>
         <p style="color: gray; font-size: 14px; margin-top: 10px;">
-            Creator: Miss Hajah Nurul Haziqah HN (PTES CS Tutor)
+            Creator: Miss Hajah Nurul Haziqah HN (Computer Sci 18/4/2026)
         </p>
     </div>
     """,
