@@ -17,7 +17,7 @@ for folder in FOLDERS:
         os.makedirs(folder)
 
 # Google Drive Config
-SERVICE_ACCOUNT_FILE = 'credentials.json'
+# SERVICE_ACCOUNT_FILE = 'credentials.json'
 SCOPES = ['https://www.googleapis.com/auth/drive']
 FOLDER_ID = '1hA1IXjC5mJEDLnGU0BSpLy2wPgJ-6R3x'
 
