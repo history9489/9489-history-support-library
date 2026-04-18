@@ -35,8 +35,20 @@ if 'search_results' not in st.session_state:
 #    return build('drive', 'v3', credentials=creds)
 
 def get_gdrive_service():
-    # This line pulls the keys from the Streamlit "Secret Safe"
-    creds_info = st.secrets["google_creds"]
+    # Constructing the dictionary manually from separate secrets
+    creds_info = {
+        "type": st.secrets["G_TYPE"],
+        "project_id": st.secrets["G_PROJECT_ID"],
+        "private_key_id": st.secrets["G_PRIVATE_KEY_ID"],
+        "private_key": st.secrets["G_PRIVATE_KEY"].replace('\\n', '\n'),
+        "client_email": st.secrets["G_CLIENT_EMAIL"],
+        "client_id": st.secrets["G_CLIENT_ID"],
+        "auth_uri": st.secrets["G_AUTH_URI"],
+        "token_uri": st.secrets["G_TOKEN_URI"],
+        "auth_provider_x509_cert_url": st.secrets["G_CERT_URL"],
+        "client_x509_cert_url": st.secrets["G_CLIENT_CERT_URL"]
+    }
+    
     creds = service_account.Credentials.from_service_account_info(
         creds_info, scopes=SCOPES)
     return build('drive', 'v3', credentials=creds)
