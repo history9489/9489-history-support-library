@@ -232,6 +232,9 @@ with tab3:
             st.divider()
     elif password != "":
         st.error("Incorrect Password")
+###############################################################################
+# --- FOOTER ---
+st.markdown("---")
 
 # Using a single container with centered alignment
 st.markdown(
@@ -249,3 +252,7 @@ st.markdown(
         <p style="color: gray; font-size: 14px; margin-top: 10px;">
             Creator: Miss Hajah Nurul Haziqah HN (PTES CS Tutor)
         </p>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
