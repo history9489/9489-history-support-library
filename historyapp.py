@@ -9,7 +9,8 @@ from io import BytesIO
 # --- 1. HISTORY CONFIGURATION (9489) ---
 SYLLABUS_CODE = "9489"
 # ⚠️ ACTION REQUIRED: Paste your "History PYP Library" Folder ID here
-GD_FOLDER_ID = "1PPKMo-fIpHT9AV6r_sHautBOaddfOR2G"
+#GD_FOLDER_ID = "1PPKMo-fIpHT9AV6r_sHautBOaddfOR2G"
+GO_FOLDER_ID = "1PPKMo-fIpHT9AV6r_sHautBOaddfOR2G"
 
 # These match your Google Drive folder names exactly
 FOLDERS = {
